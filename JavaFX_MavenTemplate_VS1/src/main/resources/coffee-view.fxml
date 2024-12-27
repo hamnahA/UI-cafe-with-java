@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="CoffeeController" spacing="10" alignment="CENTER">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <!-- Welcome Message at top -->
+    <Label text="Welcome to My Cafe!☕" 
+           style="-fx-font-size: 40; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="newOrderBtn" text="New Order" onAction="#handleNewOrder"/>
+        <Button fx:id="deleteOrderBtn" text="Delete Order" onAction="#handleDeleteOrder"/>
+    </HBox>
+
+    <VBox spacing="10" alignment="CENTER">
+        <Label text="Add to your coffee:"/>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Extra Shot ($1.20)" onAction="#handleExtraShot"/>
+            <Button text="Cream ($0.50)" onAction="#handleCream"/>
+            <Button text="Sugar ($0.50)" onAction="#handleSugar"/>
+            <Button text="Caramel ($0.75)" onAction="#handleCaramel"/>
+            <Button text="Whipped Cream ($0.75)" onAction="#handleWhippedCream"/>
+        </HBox>
+    </VBox>
+    <!-- Add this after your buttons but before the order display -->
+<Pane fx:id="animationPane" 
+      prefWidth="400" 
+      prefHeight="200" 
+      style="-fx-background-color: transparent;"/>
+    <TextArea fx:id="orderDisplay" 
+    
+          editable="false" 
+          prefRowCount="10" 
+          prefColumnCount="40" 
+          prefWidth="80" 
+          prefHeight="150" 
+          wrapText="true"/>
+    
+    <Button fx:id="completeOrderBtn" text="Complete Order" onAction="#handleCompleteOrder"/>
+</VBox>

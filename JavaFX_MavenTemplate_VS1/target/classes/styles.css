@@ -1,0 +1,67 @@
+/* Main background and layout */
+.root {
+    -fx-background-color: #f5e6d3;  /* Warm coffee-themed background */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #6b4423;  /* Dark coffee brown */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #8b593c;  /* Lighter brown on hover */
+    -fx-cursor: hand;
+}
+
+/* Text area styling */
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: #6b4423;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 14px;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+}
+
+/* Label styling */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #4a2f17;  /* Dark brown text */
+    -fx-font-weight: bold;
+}
+
+/* Complete Order button special styling */
+#completeOrderBtn {
+    -fx-background-color: #2e7d32;  /* Green color */
+}
+
+#completeOrderBtn:hover {
+    -fx-background-color: #3b9a3f;
+}
+
+/* Delete Order button special styling */
+#deleteOrderBtn {
+    -fx-background-color: #c62828;  /* Red color */
+}
+
+#deleteOrderBtn:hover {
+    -fx-background-color: #d84343;
+}
+
+/* HBox and VBox styling */
+.hbox, .vbox {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
